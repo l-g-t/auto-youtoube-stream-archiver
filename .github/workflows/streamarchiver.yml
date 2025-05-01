@@ -38,7 +38,7 @@ jobs:
         env:
           accesskey: ${{secrets.ACCESS_KEY}}
           secret: ${{secrets.SECRET}}
-          bucketname: 甬哥侃侃侃ygkkk-vods
+          bucketname: 8gkkk-vods
           #bucketname: infrared-vods          
         run: |
           file=$(find -type f -name "*.mp4" -or -type f -name "*.mkv");
@@ -76,7 +76,7 @@ jobs:
 
       - name: Download livestream
         env:
-          channelid: 甬哥侃侃侃ygkkk
+          channelid: IEOE
           #channelid: InfraredShow          
         if: steps.predownload.outcome == 'success'
         continue-on-error: true
