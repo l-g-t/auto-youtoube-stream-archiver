@@ -5,8 +5,8 @@ name: Download And Archive Livestream VOD
 concurrency: streamdownloader
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: '*/30 * * * *'  # every 30 minutes
+  #schedule:
+  #  - cron: '*/30 * * * *'  # every 30 minutes
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -78,4 +78,9 @@ jobs:
           channelid: InfraredShow
         if: steps.predownload.outcome == 'success'
         continue-on-error: true
-        run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
+        #run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
+        #run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
+        #run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
+        run: yt-dlp https://youtu.be/Esofirx8xrE --live-from-start
+        #
+        
