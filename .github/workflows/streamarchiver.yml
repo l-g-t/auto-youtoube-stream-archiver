@@ -38,7 +38,8 @@ jobs:
         env:
           accesskey: ${{secrets.ACCESS_KEY}}
           secret: ${{secrets.SECRET}}
-          bucketname: infrared-vods
+          bucketname: 甬哥侃侃侃ygkkk-vods
+          #bucketname: infrared-vods          
         run: |
           file=$(find -type f -name "*.mp4" -or -type f -name "*.mkv");
           fileName=${file:2}
@@ -75,7 +76,8 @@ jobs:
 
       - name: Download livestream
         env:
-          channelid: InfraredShow
+          channelid: 甬哥侃侃侃ygkkk
+          #channelid: InfraredShow          
         if: steps.predownload.outcome == 'success'
         continue-on-error: true
         #run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
